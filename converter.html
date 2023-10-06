@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter BharathIntern</title>
+    <script src="https://kit.fontawesome.com/97dd164a58.js" crossorigin="anonymous"></script>
+    <link rel="Stylesheet" href="converter.css">
+</head>
+<body>
+    <div class="container">
+        <i class="fa-solid fa-temperature-three-quarters" id="icon"></i>
+        <h2>Temperature Converter</h2>
+        <label for="temperature">Enter Temperature:</label>
+        <input type="number" id="temperature" min="0" step="any" placeholder="Enter your desired temperature" oninput="validateInput()">
+        <span id="error" style="color: red;"></span>
+        <select id="fromUnit">
+            <option style="text-align: center;">---Select the unit of temperature---</option>
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+            <option value="rankine">Rankine</option>
+        </select>
+        <button onclick="convertTemperature()">Convert</button>
+        <div id="result">Converted Temperatures </div>
+    </div>
+    <div class="instructions">
+        <h3>How to Use the Converter</h3>
+        <p>1. Enter the temperature value in the input field.</p>
+        <p>2. Select the unit of the entered temperature (Celsius, Fahrenheit, Kelvin, or Rankine) from the dropdown.</p>
+        <p>3. Click the "Convert" button to see the equivalent values in the other temperature units.</p>
+    </div>
+     <div id="explanation">
+            <h3>How Temperature Conversion Works</h3>
+            <p>Conversion explanation will be displayed here after conversion.</p>
+        </div>
+
+    <script src="converter.js"></script>
+</body>
+</html>
